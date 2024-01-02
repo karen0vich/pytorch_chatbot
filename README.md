@@ -1,38 +1,68 @@
+# PyTorch Contextual Chatbot
+
 Implementation of a Contextual Chatbot in PyTorch.
-Simple chatbot implementation with PyTorch.
 
-The implementation should be easy to follow for beginners and provide a basic understanding of chatbots.
-The implementation is straightforward with a Feed Forward Neural net with 2 hidden layers.
-Customization for your own use case is super easy. Just modify intents.json with possible patterns and responses and re-run the training (see below for more info).
+This project provides a simple yet insightful implementation of a chatbot using PyTorch. The goal is to offer a beginner-friendly codebase, allowing users to grasp the fundamentals of chatbot development.
 
-Installation
-Create an environment
-Whatever you prefer (e.g. conda or venv)
+## Features
 
-mkdir myproject
-$ cd myproject
-$ python3 -m venv venv
-Activate it
-Mac / Linux:
+- **PyTorch Implementation:** The chatbot is built using PyTorch, making it accessible for those interested in machine learning with this framework.
+- **Customizable:** Tailor the chatbot to your specific use case by modifying the intents.json file with relevant patterns and responses. Simply re-run the training process for an updated model.
 
-. venv/bin/activate
-Windows:
+## Installation
 
-venv\Scripts\activate
+1. **Create an Environment:**
+   - Choose your preferred environment manager (e.g., conda or venv).
+   - Create and activate a virtual environment.
 
-You also need nltk:
+    ```bash
+    mkdir myproject
+    cd myproject
+    python3 -m venv venv
+    ```
 
-pip install nltk
-If you get an error during the first run, you also need to install nltk.tokenize.punkt: Run this once in your terminal:
+    - Activate the virtual environment.
 
-$ python
->>> import nltk
->>> nltk.download('punkt')
+    **Mac / Linux:**
 
-Usage
-Run
+    ```bash
+    . venv/bin/activate
+    ```
 
-python train.py
-This will dump data.pth file. And then run
+    **Windows:**
 
-python chat.py
+    ```bash
+    venv\Scripts\activate
+    ```
+
+2. **Install NLTK:**
+   - Install the NLTK library.
+
+    ```bash
+    pip install nltk
+    ```
+
+   - If you encounter an error during the first run, install the 'punkt' tokenizer.
+
+    ```bash
+    python -m nltk.downloader punkt
+    ```
+
+## Usage
+
+1. **Train the Model:**
+   - Run the training script to generate the data.pth file.
+
+    ```bash
+    python train.py
+    ```
+
+2. **Run the Chatbot:**
+   - Execute the chatbot script to engage in a conversation.
+
+    ```bash
+    python chat.py
+    ```
+
+Feel free to explore and customize the intents.json file to enhance the chatbot's responses according to your requirements.
+
